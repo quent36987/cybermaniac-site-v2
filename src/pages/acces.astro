@@ -1,0 +1,67 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ContactInfo from '../components/ContactInfo.astro';
+
+const horaires = [
+  { jour: 'LUNDI', matin: '9h00 - 12h00', aprem: '14h00 - 19h00' },
+  { jour: 'MARDI', matin: '9h00 - 12h00', aprem: '14h00 - 19h00' },
+  { jour: 'MERCREDI', matin: '9h00 - 12h00', aprem: '14h00 - 19h00' },
+  { jour: 'JEUDI', matin: '9h00 - 12h00', aprem: '14h00 - 19h00' },
+  { jour: 'VENDREDI', matin: '9h00 - 12h00', aprem: '14h00 - 19h00' },
+  { jour: 'SAMEDI', matin: 'sur rdv', aprem: 'sur rdv' },
+  { jour: 'DIMANCHE', matin: 'fermé', aprem: 'fermé' },
+];
+---
+
+<Layout title="Cybermaniac - Plan d'accès">
+  <main class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold text-center mb-12">Plan d'accès</h1>
+
+    <div class="grid md:grid-cols-2 gap-8 mb-12">
+      <!-- Carte -->
+      <div class="w-full">
+        <div class="rounded-lg overflow-hidden shadow-lg">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1177.4808507534615!2d4.41848449624177!3d45.418671087137064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f5a91384d12ab7%3A0x1aa837c59bcf3f77!2s72%20Bd%20Alexandre%20de%20Fraissinette%2C%2042100%20Saint-%C3%89tienne!5e0!3m2!1sen!2sfr!4v1693817451366!5m2!1sen!2sfr"
+            width="100%"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          />
+        </div>
+      </div>
+
+      <!-- Informations pratiques -->
+      <div class="space-y-6">
+        <ContactInfo />
+
+        <!-- Horaires -->
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h2 class="text-2xl font-semibold mb-4">Horaires d'ouverture</h2>
+          <div class="overflow-x-auto">
+            <table class="w-full">
+              <thead class="bg-blue-900 text-white">
+                <tr>
+                  <th class="py-2 px-4 text-left">Jour</th>
+                  <th class="py-2 px-4 text-left">Matin</th>
+                  <th class="py-2 px-4 text-left">Après-midi</th>
+                </tr>
+              </thead>
+              <tbody>
+                {horaires.map(({ jour, matin, aprem }) => (
+                  <tr class="border-b border-gray-200 hover:bg-gray-50">
+                    <td class="py-2 px-4 font-medium">{jour}</td>
+                    <td class="py-2 px-4">{matin}</td>
+                    <td class="py-2 px-4">{aprem}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>

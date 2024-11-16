@@ -1,0 +1,56 @@
+---
+interface Props {
+  isOpen: boolean;
+}
+
+const { isOpen } = Astro.props;
+---
+<!-- Menu Mobile Overlay -->
+<div id="mobile-menu" class="fixed inset-0 bg-blue-900 transform translate-x-full transition-transform duration-300 ease-in-out z-50 lg:hidden">
+  <div class="flex flex-col h-full">
+    <div class="flex justify-between items-center p-4 border-b border-blue-800">
+      <a href="/" class="flex items-center space-x-3">
+        <img src="/logo.jpg" alt="Cybermaniac Logo" class="h-10 w-21" />
+        <h1 class="text-2xl font-bold text-white">Cybermaniac</h1>
+      </a>
+      <button id="close-menu" class="text-white p-2" aria-label="Fermer le menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+    <nav class="flex-1 p-4">
+      <ul class="space-y-4">
+        <li>
+          <a href="/informatique" class="block text-white text-lg py-2 hover:text-blue-200">Informatique</a>
+        </li>
+        <li>
+          <a href="/impression3d" class="block text-white text-lg py-2 hover:text-blue-200">Impression 3D</a>
+        </li>
+        <li>
+          <a href="/deplacement" class="block text-white text-lg py-2 hover:text-blue-200">Déplacement</a>
+        </li>
+        <li>
+          <a href="https://boutique.cybermaniac.fr/" class="block text-white text-lg py-2 hover:text-blue-200" target="_blank" rel="noopener noreferrer">Boutique</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+
+<script>
+  const closeButton = document.getElementById('close-menu');
+  const menuButton = document.getElementById('menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuButton?.addEventListener('click', () => {
+    mobileMenu.classList.toggle('translate-x-0');
+    mobileMenu.classList.toggle('translate-x-full');
+  });
+
+  closeButton?.addEventListener('click', () => {
+    mobileMenu.classList.toggle('translate-x-0');
+    mobileMenu.classList.toggle('translate-x-full');
+  });
+</script>

@@ -1,0 +1,8 @@
+version: '3'
+services:
+  astro-app:
+    build:
+      context: .  # Utilise le Dockerfile dans le répertoire courant
+    ports:
+      - "3000:80"  # Mappe le port 80 dans le conteneur au port 3000 sur l'hôte
+    container_name: astro-app

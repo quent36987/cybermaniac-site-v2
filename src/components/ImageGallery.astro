@@ -1,0 +1,29 @@
+---
+interface Props {
+  numberOfImages: number;
+  basePath: string;
+}
+
+const { numberOfImages, basePath } = Astro.props;
+
+const images = Array.from({ length: numberOfImages }, (_, i) => ({
+  src: `${basePath}/image${i + 1}.jpg`,
+  alt: `Impression 3D exemple ${i + 1}`
+}));
+---
+
+<div class="w-full">
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-4">
+    {images.map((image, index) => (
+      <div class="group relative overflow-hidden rounded-lg shadow-lg aspect-square cursor-pointer hover:shadow-xl transition-shadow">
+        <img
+          src={image.src}
+          alt={image.alt}
+          class="object-cover w-full h-full transform transition-transform duration-300 group-hover:scale-110"
+          loading={index < 8 ? "eager" : "lazy"}
+        />
+        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-opacity duration-300"></div>
+      </div>
+    ))}
+  </div>
+</div>

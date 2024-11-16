@@ -1,0 +1,57 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const sections = [
+  {
+    title: "La Société",
+    content: `La société CYBERMANIAC exerce son activité dans le cadre de : «EBA SARL», représentée par Monsieur GOUJJON Samuel, 189 route du barrage, 42300 VILLERST, Identifiant SIRET : 900 126 129 RCS ROANNE`
+  },
+  {
+    title: "Protection des Données",
+    content: `Conformément au règlement européen pour la protection des données personnelles (RGPD) et en France en application de la loi 78-17 du 06 janvier 1978 (dite « Loi Informatique et Libertés »), il est rappelé que toutes les données personnelles demandées sont nécessaires à nos traitements internes. Ces données personnelles ne sont pas cédées ou transmises à des tiers.`
+  },
+  {
+    title: "Droits d'Accès",
+    content: `Vous disposez d'un droit d'accès, de modification, de rectification et de suppression des données personnelles vous concernant. Pour exercer ces droits, contactez-nous à : 54 cours fauriel 42100 saint etienne ou par mail : cybermaniac42@gmail.com`
+  },
+  {
+    title: "Contact",
+    content: `Téléphone Fixe : 04.87.66.67.33
+    Téléphone Mobile : 06.84.25.25.27
+    Email : cybermaniac42@gmail.com`
+  },
+  {
+    title: "Immatriculation",
+    content: `Immatriculation au Registre du commerce et des sociétés sous le numéro : Roanne B 900 126 129
+    Numéro d'immatriculation de l'entreprise : 900 126 129 RCS ROANNE`
+  },
+  {
+    title: "TVA",
+    content: `Numéro d'identification TVA : FR55900126129`
+  },
+  {
+    title: "Hébergeur",
+    content: `1&1 Internet SARL
+    7, place de la Gare
+    BP 70109
+    57201 Sarreguemines Cedex`
+  }
+];
+---
+
+<Layout title="Cybermaniac - Mentions Légales">
+  <main class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold text-center mb-12">Mentions Légales</h1>
+
+    <div class="max-w-3xl mx-auto space-y-8">
+      {sections.map(section => (
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h2 class="text-xl font-bold mb-4 text-blue-900">{section.title}</h2>
+          <div class="text-gray-700 whitespace-pre-line">
+            {section.content}
+          </div>
+        </div>
+      ))}
+    </div>
+  </main>
+</Layout>

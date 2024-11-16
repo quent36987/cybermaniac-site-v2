@@ -1,0 +1,124 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import ContactInfo from '../components/ContactInfo.astro';
+
+const services = [
+  {
+    title: "Entretien Informatique",
+    description: "Maintenance et réparation de vos équipements informatiques",
+    icon: "🔧"
+  },
+  {
+    title: "Vente d'Équipements",
+    description: "Matériel informatique de qualité adapté à vos besoins",
+    icon: "💻"
+  },
+  {
+    title: "Montage PC",
+    description: "Assemblage sur mesure de votre ordinateur",
+    icon: "⚡"
+  },
+  {
+    title: "Impression 3D",
+    description: "Service d'impression 3D FDM professionnel",
+    icon: "🖨️"
+  },
+  {
+    title: "Modélisation 3D",
+    description: "Création de modèles 3D techniques sur mesure",
+    icon: "📐"
+  },
+  {
+    title: "Service à Domicile",
+    description: "Intervention à votre domicile pour plus de confort",
+    icon: "🏠"
+  }
+];
+---
+
+<Layout title="Cybermaniac - Expert Informatique à Saint-Étienne">
+  <main>
+    <!-- Hero Section -->
+    <section class="bg-blue-800 text-white py-20">
+      <div class="container mx-auto px-4 text-center">
+        <img src="/logo.jpg" alt="Cybermaniac Logo" class="h-32 w-66 mx-auto mb-8" />
+        <h1 class="text-5xl font-bold mb-6">Cybermaniac</h1>
+        <p class="text-xl mb-8">Votre expert informatique à Saint-Étienne depuis plus de 15 ans</p>
+        <a href="https://boutique.cybermaniac.fr/" class="bg-white text-blue-800 px-8 py-3 rounded-full font-semibold hover:bg-blue-100 transition-colors">
+          Visiter notre boutique en ligne
+        </a>
+      </div>
+    </section>
+
+    <!-- Store Front Image Section -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+          <img 
+            src="/magasin.jpg" 
+            alt="Devanture du magasin Cybermaniac" 
+            class="w-full h-[400px] object-cover rounded-lg shadow-lg"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">Nos Services</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map(service => (
+            <ServiceCard {...service} />
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-8">Qui Sommes-nous ?</h2>
+        <div class="max-w-3xl mx-auto text-lg text-gray-700 space-y-6">
+          <p>
+            Cybermaniac est une entreprise présente depuis plus de 15 ans dans la région stéphanoise. 
+            Après 5 années passées dans le Cours Fauriel, nous sommes maintenant installés à la Métare depuis 2023.
+          </p>
+          <p>
+            Notre équipe complète réunit des talents variés : modélisateur 3D, informaticiens, et peintre en freelance. 
+            Chacun apporte son expertise pour vous garantir un service complet et professionnel.
+          </p>
+          <p>
+            Notre nouvelle boutique est le symbole de notre croissance et de notre dévouement envers nos clients.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="max-w-2xl mx-auto">
+          <ContactInfo />
+        </div>
+      </div>
+    </section>
+
+    <!-- Shop Section -->
+    <section id="shop" class="py-16 bg-white">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold text-center mb-8">Notre Boutique en Ligne</h2>
+        <p class="text-xl mb-8">Découvrez notre sélection de produits et services sur notre boutique en ligne</p>
+        <a 
+          href="https://boutique.cybermaniac.fr/" 
+          class="inline-block bg-blue-800 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-lg"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Accéder à la boutique
+        </a>
+      </div>
+    </section>
+  </main>
+</Layout>

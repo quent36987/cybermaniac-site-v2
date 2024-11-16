@@ -1,0 +1,81 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const zones = [
+  {
+    name: "Zone Verte",
+    price: "20€",
+    description: "Tarif Minimum de Déplacement"
+  },
+  {
+    name: "Zone Jaune",
+    price: "55€",
+    description: "Tarif Minimum de Déplacement"
+  },
+  {
+    name: "Hors Zones",
+    price: "55€ + 1.5€/km",
+    description: "En dehors de Saint-Étienne"
+  }
+];
+
+const supplements = [
+  {
+    title: "Temps Additionnel",
+    description: "20€ par tranche de 30 minutes supplémentaires après la première heure sur place."
+  },
+  {
+    title: "Interruption du Service",
+    description: "Si la situation n'évolue pas après 2 heures sur place, le technicien se réserve le droit d'interrompre le rendez-vous."
+  }
+];
+---
+
+<Layout title="Cybermaniac - Déplacement à Domicile">
+  <main class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold text-center mb-12">Service de Déplacement à Domicile</h1>
+
+    <div class="max-w-4xl mx-auto mb-12">
+      <div class="bg-white p-8 rounded-lg shadow-lg mb-8">
+        <h2 class="text-2xl font-bold mb-4">Notre Service</h2>
+        <p class="text-lg text-gray-700 mb-4">
+          Vous pouvez faire appel à notre service de déplacement à domicile grâce à notre partenaire de chez FROZEYES IMR.
+        </p>
+        <p class="text-lg text-gray-700 mb-4">
+          Notre technicien se rendra à votre domicile pour tout problème informatique (MAC ou PC) ou une installation de matériel acheté en boutique.
+        </p>
+        <div class="bg-blue-50 p-4 rounded-lg">
+          <p class="font-semibold">Pour prendre rendez-vous :</p>
+          <ul class="list-disc list-inside mt-2">
+            <li>En boutique</li>
+            <li>Par téléphone : <a href="tel:0695841457" class="text-blue-600 hover:text-blue-800">06.95.84.14.57</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-lg mb-12">
+        <img class="rounded-lg" src="/zone.png"/>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        {zones.map(zone => (
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h3 class="text-xl font-bold mb-2">{zone.name}</h3>
+            <p class="text-2xl text-blue-600 font-bold mb-2">{zone.price}</p>
+            <p class="text-gray-600">{zone.description}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="bg-white p-8 rounded-lg shadow-lg">
+        <h2 class="text-2xl font-bold mb-4">Suppléments et Conditions</h2>
+        {supplements.map(supp => (
+          <div class="mb-6 last:mb-0">
+            <h3 class="text-xl font-bold mb-2">{supp.title}</h3>
+            <p class="text-gray-700">{supp.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </main>
+</Layout>

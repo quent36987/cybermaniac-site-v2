@@ -1,0 +1,52 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const services = [
+  {
+    title: "Entretien d'Équipements",
+    description: "Notre équipe de professionnels est disponible pour vous offrir conseils et recommandations pour vos projets avec le budget le plus adapté.",
+    icon: "🔧"
+  },
+  {
+    title: "Montage PC sur Mesure",
+    description: "Nous vous proposons un montage de PC fixe sur mesure en fonction de vos besoins et de vos exigences. Nous montons également vos ordinateurs même si les pièces ne sont pas de chez nous.",
+    icon: "💻"
+  },
+  {
+    title: "Ordinateurs Portables Terra",
+    description: "Nous proposons une gamme d'ordinateurs portables de la marque Terra. Toutes nos machines sont testées avant la remise en main-propre.",
+    icon: "💼"
+  },
+  {
+    title: "Périphériques",
+    description: "Large gamme de périphériques : claviers, souris, casques et accessoires bureautiques ou gaming, disponibles selon le stock.",
+    icon: "🖱️"
+  }
+];
+---
+
+<Layout title="Cybermaniac - Services Informatiques">
+  <main class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold text-center mb-12">Services Informatiques</h1>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      {services.map(service => (
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <div class="text-4xl mb-4">{service.icon}</div>
+          <h2 class="text-xl font-bold mb-3">{service.title}</h2>
+          <p class="text-gray-600">{service.description}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-12 bg-blue-50 p-8 rounded-lg max-w-4xl mx-auto">
+      <h2 class="text-2xl font-bold mb-4">Notre Engagement</h2>
+      <p class="text-lg text-gray-700 mb-4">
+        Tous nos services sont réalisés par des professionnels qualifiés, garantissant un travail de qualité et un service personnalisé.
+      </p>
+      <p class="text-lg text-gray-700">
+        Pour toute demande de livraison, consultez notre espace Déplacement à domicile.
+      </p>
+    </div>
+  </main>
+</Layout>

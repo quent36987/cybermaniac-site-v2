@@ -1,0 +1,78 @@
+---
+import MobileMenu from '../components/MobileMenu.astro';
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+
+---
+
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Cybermaniac - Votre expert informatique à Saint-Étienne" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/logo.jpg" />
+    <title>{title}</title>
+  </head>
+  <body class="bg-gray-50">
+    <header class="bg-blue-900 text-white py-4 sticky top-0 z-40">
+      <nav class="container mx-auto px-4">
+        <div class="flex justify-between items-center">
+          <a href="/" class="flex items-center space-x-3">
+            <img src="/logo.jpg" alt="Cybermaniac Logo" class="h-10 w-21" />
+          </a>
+          
+          <!-- Menu Mobile -->
+          <button id="menu-button" class="lg:hidden p-2" aria-label="Menu">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+          </button>
+
+          <!-- Menu Desktop -->
+          <div class="hidden lg:flex space-x-6">
+            <a href="/informatique" class="hover:text-blue-200">Informatique</a>
+            <a href="/impression3d" class="hover:text-blue-200">Impression 3D</a>
+            <a href="/deplacement" class="hover:text-blue-200">Déplacement</a>
+            <a href="https://boutique.cybermaniac.fr/" class="hover:text-blue-200" target="_blank" rel="noopener noreferrer">Boutique</a>
+          </div>
+
+          <img src="/logoFRP2I.png" alt="Logo" class="h-10 w-21" />
+        </div>
+      </nav>
+    </header>
+
+    <!-- Menu Mobile Overlay -->
+    <MobileMenu isOpen={false} data-mobile-menu />
+
+    <slot />
+    
+    <footer class="bg-blue-900 text-white py-8 mt-12">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="text-center md:text-left">
+            <img src="/logo.jpg" alt="Cybermaniac Logo" class="h-12 w-25 mx-auto md:mx-0 mb-4" />
+            <p>&copy; 2024 Cybermaniac - Tous droits réservés</p>
+          </div>
+          <div class="text-center">
+            <h3 class="font-semibold mb-4">Liens Utiles</h3>
+            <ul class="space-y-2">
+              <li><a href="/mentions-legales" class="hover:text-blue-200">Mentions Légales</a></li>
+              <li><a href="/mentions-general" class="hover:text-blue-200">Conditions Générales de Vente</a></li>
+            </ul>
+          </div>
+          <div class="text-center md:text-right">
+            <h3 class="font-semibold mb-4">Contact</h3>
+            <p>72 boulevard Alexandre de Fraissinette</p>
+            <p>42100 Saint-Étienne</p>
+            <p>Tél : 04.87.66.67.33</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
