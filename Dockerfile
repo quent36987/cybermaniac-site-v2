@@ -20,7 +20,7 @@ FROM nginx:alpine
 
 # Copiez les fichiers construits de l'étape précédente vers le répertoire NGINX
 COPY --from=builder /app/dist /usr/share/nginx/html
-
+COPY docker/nginx.conf /etc/nginx/conf.d/default.conf
 # Expose le port 80
 EXPOSE 80
 
