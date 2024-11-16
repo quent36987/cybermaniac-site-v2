@@ -1,9 +1,7 @@
 version: '3'
 services:
   astro-app:
-    build:
-        context: .
-        dockerfile: Dockerfile
+    image: ghcr.io/quent36987/cybermaniac-site-v2:latest
     ports:
       - "5697:8080"
     container_name: astro-app
