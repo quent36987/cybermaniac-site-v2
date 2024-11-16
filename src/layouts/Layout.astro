@@ -25,7 +25,7 @@ const { title } = Astro.props;
           <a href="/" class="flex items-center space-x-3">
             <img src="/logo.jpg" alt="Cybermaniac Logo" class="h-10 w-21" />
           </a>
-          
+
           <!-- Menu Mobile -->
           <button id="menu-button" class="lg:hidden p-2" aria-label="Menu">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -38,6 +38,7 @@ const { title } = Astro.props;
             <a href="/informatique" class="hover:text-blue-200">Informatique</a>
             <a href="/impression3d" class="hover:text-blue-200">Impression 3D</a>
             <a href="/deplacement" class="hover:text-blue-200">Déplacement</a>
+            <a href="/acces" class="hover:text-blue-200">Accès</a>
             <a href="https://boutique.cybermaniac.fr/" class="hover:text-blue-200" target="_blank" rel="noopener noreferrer">Boutique</a>
           </div>
 
@@ -50,7 +51,7 @@ const { title } = Astro.props;
     <MobileMenu isOpen={false} data-mobile-menu />
 
     <slot />
-    
+
     <footer class="bg-blue-900 text-white py-8 mt-12">
       <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
