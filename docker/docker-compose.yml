@@ -3,5 +3,5 @@ services:
   astro-app:
     image: ghcr.io/quent36987/cybermaniac-site-v2:latest
     ports:
-      - "5697:8080"
+      - "4321:8080"
     container_name: astro-app

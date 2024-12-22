@@ -8,7 +8,7 @@ RUN npm run build
 
 EXPOSE 4321
 
-CMD ["node", "build"]
+CMD ["npm", "run", "start"]
 
 #FROM nginx:alpine AS runtime
 #COPY ./docker/nginx.conf /etc/nginx/nginx.conf
