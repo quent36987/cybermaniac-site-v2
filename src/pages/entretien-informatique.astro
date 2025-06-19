@@ -1,0 +1,41 @@
+---
+import ContactInfo from '../components/ContactInfo.astro';
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="Cybermaniac - Entretien Informatique">
+  <main>
+    <!-- Hero Section -->
+    <section class="text-white py-10">
+      <div class="container mx-auto px-4 text-center">
+        <img src="/logo-ecriture.png " alt="Logo Cybermaniac" class="w-full lg:w-auto lg:h-20 mx-auto mb-4" />
+        <p class="text-xl mb-8">Votre expert informatique à Saint-Étienne depuis plus de 18 ans</p>
+        <h2 class="text-5xl font-bold text-center mb-12 text-white py-4">Entretien Informatique</h2>
+      </div>
+    </section>
+
+    <!-- Body Section -->
+    <section id="body">
+      <div class="container mx-auto px-4 max-w-4xl text-lg text-white space-y-6">
+        <p>Chez Cybermaniac, nous proposons un service d'entretien informatique complet pour assurer le bon fonctionnement de vos matériels. Soucieux de l'écologie et de l'environnement, nous privilégierons toujours la réparation de vos appareils plutôt que l'achat d'un nouvel appareil tout neuf.</p>
+        <p>Notre service d'entretien informatique comprend :</p>
+        <ul class="list-disc pl-6 space-y-2">
+          <li>Maintenance au comptoir à partir de 10€</li>
+          <li>Nettoyage de virus à partir de 30€</li>
+          <li>Mise à niveau matérielle sur devis</li>
+          <li>Réparation de Windows à partir de 65€</li>
+        </ul>
+        <p class="text-xl font-bold">Le diagnostic et le devis sont gratuit !</p>
+        <p>⚠️ Nous ne faisons pas les ordinateurs Apple ni les téléphones pour le moment.</p>
+        <p>Pour plus d'informations, n'hésitez pas à nous contacter ou à venir nous voir en magasin !</p>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="container mx-auto px-4 max-w-4xl text-lg text-white space-y-6 py-8">
+        <ContactInfo />
+      </div>
+    </section>
+  
+  </main>
+</Layout>

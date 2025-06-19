@@ -4,7 +4,7 @@ import Layout from '../layouts/Layout.astro';
 const sections = [
   {
     title: "La Société",
-    content: `La société CYBERMANIAC exerce son activité dans le cadre de : «EBA SARL», représentée par Monsieur GOUJJON Samuel, 189 route du barrage, 42300 VILLERST, Identifiant SIRET : 900 126 129 RCS ROANNE`
+    content: `La société CYBERMANIAC exerce son activité dans le cadre de : «EBA SARL», représentée par Monsieur GOUJON Samuel, 189 route du barrage, 42300 VILLERST, Identifiant SIRET : 900 126 129 RCS ROANNE`
   },
   {
     title: "Protection des Données",
@@ -41,13 +41,13 @@ const sections = [
 
 <Layout title="Cybermaniac - Mentions Légales">
   <main class="container mx-auto px-4 py-8">
-    <h1 class="text-3xl font-bold text-center mb-12">Mentions Légales</h1>
+    <h1 class="text-3xl font-bold text-white text-center mb-12">Mentions Légales</h1>
 
     <div class="max-w-3xl mx-auto space-y-8">
       {sections.map(section => (
-        <div class="bg-white p-6 rounded-lg shadow-lg">
-          <h2 class="text-xl font-bold mb-4 text-blue-900">{section.title}</h2>
-          <div class="text-gray-700 whitespace-pre-line">
+        <div class="bg-GrisFonce2 p-6 rounded-lg shadow-md border-2 border-[#7F44A6] rounded-lg p-6 text-white shadow-[0_0_15px_#7F44A6]">
+          <h2 class="text-xl font-bold mb-4 text-Rose">{section.title}</h2>
+          <div class="text-white whitespace-pre-line">
             {section.content}
           </div>
         </div>

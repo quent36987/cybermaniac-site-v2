@@ -1,0 +1,206 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Product from '../components/Product.astro';
+import ContactInfo from '../components/ContactInfo.astro';
+
+const produits = [
+  {
+    title : "ONDINE",
+    properties : [
+      "Boitier Micro ATX",
+      "Carte mère AM4",
+      "Processeur AMD Ryzen 3",
+      "16 Go RAM DDR4",
+      "SSD 1 To",
+      "Alimentation 550W"
+    ],
+    price : "546 €",
+    image : "/ondine.png",
+    alt : "ondine",
+    description : "Ondine est idéale pour la bureautique, petit et passe-partout, il n'encombre pas vos espaces et est assez silencieux.",
+    description2 : "♥ COUP DE CŒUR DE NOS SENIORS ♥",
+    ordertext : "order-1 md:order-1",
+    orderimg : "order-2 md:order-2"
+  },
+  {
+    title : "MINI MOG",
+    properties : [
+      "Boitier Mini Tour",
+      "Carte mère AM4",
+      "Processeur AMD Ryzen 5",
+      "16 Go RAM DDR4",
+      "SSD 500 Go",
+      "Alimentation 550W",
+      "Carte graphique Intel ARC"
+    ],
+    price : "800 €",
+    image : "/minimog.png",
+    alt : "minimog",
+    description : "Mini Mog est idéal pour une entrée de gamme gaming pour les petits budgets, petit et fiable, un peu lumineux, il est parfait pour tous ceux qui ont la passion du jeu vidéo tout en ayant un budget assez serré.",
+    description2 : "♥ COUP DE CŒUR DE NOS ETUDIANTS ET FOYERS MODESTES ♥",
+    ordertext : "order-1 md:order-2",
+    orderimg : "order-2 md:order-1"
+  },
+  {
+    title : "GOLGOTHA",
+    properties : [
+      "Boitier Moyen",
+      "Carte mère AM4",
+      "Processeur AMD Ryzen 5",
+      "16 Go RAM DDR4",
+      "SSD 1 To",
+      "Alimentation 750W",
+      "Carte graphique ASRock 12 Go"
+    ],
+    price : "1350 €",
+    image : "/golgotha.png",
+    alt : "golgotha",
+    description : "Golgotha est idéal pour le gaming, fiable et puissant, un peu imposant, il est parfait pour offrir d'excellentes performances en jeu comme en création.",
+    ordertext : "order-1 md:order-1",
+    orderimg : "order-2 md:order-2"
+  },
+  {
+    title : "NOSFERATU",
+    properties : [
+      "Grand Boitier",
+      "Carte mère AM5",
+      "Processeur AMD Ryzen 9",
+      "64 Go RAM DDR5",
+      "SSD 2 To",
+      "Alimentation 1000W",
+      "Carte graphique ASRock 24 Go",
+      "Watercooling 420mm"
+    ],
+    price : "4200 €",
+    image : "/nosferatu.png",
+    alt : "nosferatu",
+    description : "Nosferatu est idéal pour le gaming et la création 3D, fiable et puissant, il est parfait pour offrir un rendu de très haute qualité et pour les plus exigeants.",
+    ordertext : "order-1 md:order-2",
+    orderimg : "order-2 md:order-1"
+  },
+  {
+    title : "TERRA Mobile 1516u",
+    properties : [
+      "Intel Core i3-1215U",
+      "Windows 11 Home",
+      'Ecran 15.6" Non Glare 1920x1080',
+      "8 Go RAM DDR4",
+      "SSD 500 Go",
+      "Intel UHD Graphics",
+      "Emplacement pour un deuxième disque dur",
+      "6h d'autonomie",
+      "Ports HDMI, VGA, 3 USB A, 1 USB C, Ethernet",
+      "Garantie 2 ans"
+    ],
+    price : "680 €",
+    image : "/terra_mobile_1516u.png",
+    alt : "terra-mobile-1516u",
+    description : " PC portable polyvalent et très agréable à utiliser au quotidien. Bureautique, navigation web, multimédia... Il sait tout faire !",
+    ordertext : "order-1 md:order-1",
+    orderimg : "order-2 md:order-2"
+  },
+  {
+    title : "TERRA Mobile 1716u",
+    properties : [
+      "Intel Core i3-1215U",
+      "Windows 11 Home",
+      'Ecran 17.3" Non Glare 1920x1080 (Rétroéclairage LED)',
+      "8 Go RAM DDR4",
+      "SSD 500 Go",
+      "Intel UHD Graphics",
+      "Emplacement pour un deuxième disque dur",
+      "6h d'autonomie",
+      "Ports HDMI, VGA, 3 USB A, 1 USB C, Ethernet",
+      "Garantie 2 ans",
+      "Garantie batterie 6 mois"
+    ],
+    price : "880 €",
+    image : "/terra_mobile_1716u.png",
+    alt : "terra-mobile-1716u",
+    description : "PC portable polyvalent, son écran 17 pouces lui garantie un confort d'utilisation supérieur. Bureautique, navigation web, multimédia... Il sait tout faire !",
+    ordertext : "order-1 md:order-2",
+    orderimg : "order-2 md:order-1"
+  },
+  {
+    title : "Ecran TERRA 23,8 pouces reconditionné",
+    properties : [
+      'Ecran 23,8" (60,5 cm) IPS LED',
+      "Résolution 1920x1080 full HD",
+      "Angle de vision de 178°",
+      "Ports HDMI, DisplayPort, USB-C",
+      "3.5kg"
+    ],
+    price : "119 €",
+    image : "/terra_ecran_24.png",
+    alt : "terra-ecran-24",
+    description : "Ecran TERRA 23,8 pouces reconditionné, idéal pour le travail ou le gaming. Il offre une excellente qualité d'image et de nombreux ports pour connecter vos appareils.",
+    ordertext : "order-1 md:order-1",
+    orderimg : "order-2 md:order-2",
+  },
+  {
+    title : "Ecran TERRA 27 pouces reconditionné",
+    properties : [
+      'Ecran 27" (68,6 cm) IPS LED',
+      "Résolution 1920x1080 full HD",
+      "Angle de vision de 178°",
+      "Ports HDMI, DisplayPort, USB-C",
+      "4.5kg"
+    ],
+    price : "139 €",
+    image : "/terra_ecran_27.png",
+    alt : "terra-ecran-27",
+    description : "Ecran TERRA 27 pouces reconditionné, idéal pour le travail ou le gaming. Il offre une excellente qualité d'image et de nombreux ports pour connecter vos appareils.",
+    ordertext : "order-1 md:order-2",
+    orderimg : "order-2 md:order-1",
+  }
+]
+---
+<Layout title="Cybermaniac - Montage/Vente Informatique">
+  <main>
+    <!-- Hero Section -->
+    <section class="text-white py-10">
+      <div class="container mx-auto px-4 text-center">
+        <img src="/logo-ecriture.png " alt="Logo Cybermaniac" class="w-full lg:w-auto lg:h-20 mx-auto mb-4" />
+        <p class="text-xl mb-8">Votre expert informatique à Saint-Étienne depuis plus de 18 ans</p>
+        <h2 class="text-5xl font-bold text-center mb-12 text-white py-4">Montage et Vente d'Équipements Informatiques</h2>
+      </div>
+    </section>
+
+    <!-- Body Section -->
+    <section id="body">
+      <div class="container mx-auto px-4 max-w-4xl text-lg text-white space-y-6">
+        <p>Chez Cybermaniac, nous proposons un service de montage et de vente d'équipements informatiques sur mesure.</p>
+        <p>Nous vous proposons :</p>
+        <ul class="list-disc pl-6 space-y-2">
+          <li>Conseils personnalisés pour choisir le meilleur équipement</li>
+          <li>Assemblage sur mesure de votre ordinateur sur devis</li>
+          <li>Vente de matériel informatique de qualité adapté à vos besoins</li>
+        </ul>
+        <p>Que vous ayez besoin d'un PC pour le gaming, le travail ou les loisirs, nous sommes là pour vous aider à trouver la solution idéale.</p>
+        <p class ="text-2xl text-center font-bold">Parmis les produits que nous vendons dans notre boutique :</p>
+      </div>
+      <!-- Products Section -->
+          {produits.map(produits => (
+            <Product {...produits} />
+          ))}
+
+      
+
+      <div class="container mx-auto px-4 max-w-4xl text-lg text-white  text-center">
+        <p class ="italic text-base">*Photos non contractuelles</p>
+        <p class = "mt-16">Nous vendons également des PC portables reconditionnés, des tablettes, des imprimantes, des périphériques...</p>
+        <p class="font-bold text-2xl py-4">Pour rappel : le devis est gratuit !</p>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="container mx-auto px-4">
+        <p class="text-2xl text-white font-bold text-center">Pour plus d'informations, n'hésitez pas à nous contacter ou à venir nous voir en magasin !</p>
+        <div class="container mx-auto max-w-4xl mt-8">
+          <ContactInfo />
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

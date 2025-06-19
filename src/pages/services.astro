@@ -1,0 +1,159 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ContactInfo from '../components/ContactInfo.astro';
+---
+<Layout title="Cybermaniac - Services">
+  <main>
+    <!-- Hero Section -->
+    <section class="text-white py-10">
+      <div class="container mx-auto px-4 text-center">
+        <img src="/logo-ecriture.png " alt="Logo Cybermaniac" class="w-full lg:w-auto lg:h-20 mx-auto mb-4" />
+        <p class="text-xl mb-8">Votre expert informatique à Saint-Étienne depuis plus de 18 ans</p>
+        <h2 class="text-5xl font-bold text-center mb-12 text-white py-4">Tous nos services</h2>
+      </div>
+    </section>
+
+    <!-- Entretien Informatique Section -->
+    <section id="entretien-info">
+      <div class="container mx-auto px-4 ">
+        <h2 class="text-4xl font-bold py-16 text-white">Entretien Informatique</h2>
+        <div class ="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 items-center">
+          <div class="max-w-4xl text-lg text-white space-y-6 order-1 md:order-1">
+              <p>Notre service d'entretien informatique comprends : </p>
+              <ul class="list-disc pl-6 space-y-2">
+                <li>Maintenance au comptoir</li>
+                <li>Nettoyage ordinateur</li>
+                <li>Mise à niveau matériel</li>
+                <li>Réparation Windows</li>
+              </ul>
+              <p class="text-xl font-bold">Le diagnostic et le devis sont gratuit !</p>
+              <p>⚠️Nous ne faisons pas les ordinateurs Apple ni les téléphones pour le moment</p>
+
+          </div>
+          <a href="/entretien-informatique" class="order-2 md:order-2 text-center max-w-sm w-full items-center max-h-[384px] ml-auto p-6 rounded-lg shadow-md border-2 border-[#7F44A6] rounded-lg p-6 text-white shadow-[0_0_15px_#7F44A6] hover:shadow-[0_0_35px_#7F44A6] hover:font-bold transition-shadow duration-300 flex flex-col justify-center h-full"
+              style="background-image: url('/background-1.png'); background-size: cover; background-position: center;">
+              <h2 class="text-5xl text-center mb-4">🛠️</h2>
+              <p class="text-1xl ">Voir le détail</p>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Modélisation et Impression 3D Section -->
+    <section id="modelisation-impression">
+      <div class="container mx-auto px-4 ">
+        <h2 class="text-4xl font-bold py-16 text-white">Modélisation et Impression 3D</h2>
+        <div class ="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 items-center">
+          <div class="max-w-4xl text-lg text-white space-y-6 order-1 md:order-2">
+              <p>Craftable3D, notre branche 3D de Cybermaniac propose :</p>
+              <ul class="list-disc pl-6 space-y-2">
+                <li>Impression 3D FDM</li>
+                <li>Modélisation 3D sur mesure</li>
+                <li>Réparation de vos imprimantes 3D</li>
+              </ul>
+
+          </div>
+          <a href="https://craftable.cybermaniac.fr/" target="_blank" rel="noopener noreferrer" class="order-2 md:order-1 text-center max-w-sm w-full items-center max-h-[384px] mr-auto p-6 rounded-lg shadow-md border-2 border-[#7F44A6] rounded-lg p-6 text-white shadow-[0_0_15px_#7F44A6] hover:shadow-[0_0_35px_#7F44A6] hover:font-bold transition-shadow duration-300 flex flex-col justify-center h-full"
+              style="background-image: url('/background-2.png'); background-size: cover; background-position: center;">
+              <h2 class="text-5xl text-center mb-4">📐</h2>
+              <p class="text-1xl ">Voir le détail</p>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Photocopie et Impression Section -->
+    <section id="photocopie-impression">
+      <div class="container mx-auto px-4 ">
+        <h2 class="text-4xl font-bold py-16 text-white">Photocopie et Impression</h2>
+        <div class ="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 items-center">
+          <div class="max-w-4xl text-lg text-white space-y-6 order-1 md:order-1">
+              <p>Nous mettons à disposition de nos clients, un service de photocopie :</p>
+              <ul class="list-disc pl-6 space-y-2">
+                <li>Photocopie</li>
+                <li>Impression</li>
+                <li>Scan de documents</li>
+              </ul>
+
+          </div>
+          <a href="/photocopie" class="order-2 md:order-2 text-center max-w-sm w-full items-center max-h-[384px] ml-auto p-6 rounded-lg shadow-md border-2 border-[#7F44A6] rounded-lg p-6 text-white shadow-[0_0_15px_#7F44A6] hover:shadow-[0_0_35px_#7F44A6] hover:font-bold transition-shadow duration-300 flex flex-col justify-center h-full"
+              style="background-image: url('/background-3.png'); background-size: cover; background-position: center;">
+              <h2 class="text-5xl text-center mb-4">🖨️</h2>
+              <p class="text-1xl ">Voir le détail</p>
+          </a>
+        </div>
+      </div>
+    </section>    
+    <!-- Montage et Vente d'Équipements Informatiques Section -->
+    <section id="montage-vente">
+      <div class="container mx-auto px-4 ">
+        <h2 class="text-4xl font-bold py-16 text-white">Montage et Vente d'Équipements Informatiques</h2>
+        <div class ="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 items-center">
+          <div class="max-w-4xl text-lg text-white space-y-6 order-1 md:order-2">
+            <p>Notre boutique vous propose :</p>
+            <ul class="list-disc pl-6 space-y-2">
+              <li>Montage de PC sur mesure</li>
+              <li>Ordinateurs portables/écrans et tablettes TERRA®</li>
+              <li>Ordinateurs portables reconditionnés</li>
+              <li>Gamme de PC fixe de notre expert</li>
+            </ul>
+
+          </div>
+          <a href="/montage-vente" class="order-2 md:order-1 text-center max-w-sm w-full items-center max-h-[384px] mr-auto p-6 rounded-lg shadow-md border-2 border-[#7F44A6] rounded-lg p-6 text-white shadow-[0_0_15px_#7F44A6] hover:shadow-[0_0_35px_#7F44A6] hover:font-bold transition-shadow duration-300 flex flex-col justify-center h-full"
+              style="background-image: url('/background-4.png'); background-size: cover; background-position: center;">
+              <h2 class="text-5xl text-center mb-4">💻</h2>
+              <p class="text-1xl ">Voir le détail</p>
+          </a>
+        </div>
+      </div>
+    </section>      
+    <!-- Vente de filaments 3D en ligne Section -->
+    <section id="filaments-3D">
+      <div class="container mx-auto px-4 ">
+        <h2 class="text-4xl font-bold py-16 text-white">Vente de filaments 3D en ligne et en boutique</h2>
+        <div class ="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 items-center">
+          <div class="max-w-4xl text-lg text-white space-y-6 order-1 md:order-1">
+              <p class="font-semibold">Visitez notre nouvelle boutique de filaments 3D toute neuve !</p>
+          </div>
+          <a href="https://boutique.cybermaniac.fr/" target="_blank" rel="noopener noreferrer" class="order-2 md:order-2 text-center max-w-sm w-full items-center max-h-[384px] ml-auto p-6 rounded-lg shadow-md border-2 border-[#7F44A6] rounded-lg p-6 text-white shadow-[0_0_15px_#7F44A6] hover:shadow-[0_0_35px_#7F44A6] hover:font-bold transition-shadow duration-300 flex flex-col justify-center h-full"
+              style="background-image: url('/background-5.png'); background-size: cover; background-position: center;">
+              <h2 class="text-5xl text-center mb-4">🧵</h2>
+              <p class="text-1xl ">Voir le détail</p>
+          </a>
+        </div>
+      </div>
+    </section>   
+    <!-- Service à Domicile Section -->
+    <section id="service-domicile">
+      <div class="container mx-auto px-4 ">
+        <h2 class="text-4xl font-bold py-16 text-white">Service à Domicile</h2>
+        <div class ="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 items-center">
+          <div class="max-w-4xl text-lg text-white space-y-6 order-1 md:order-2">
+              <p>Nous proposons un service à domicile pour : </p>
+              <ul class="list-disc pl-6 space-y-2">
+                <li>Dépannage</li>
+                <li>Installation et mise en route</li>
+                <li>Cours d'informatique à domicile</li>
+              </ul>
+
+          </div>
+          <a href="/service-domicile" class="order-1 md:order-1 text-center max-w-sm w-full items-center max-h-[384px] mr-auto p-6 rounded-lg shadow-md border-2 border-[#7F44A6] rounded-lg p-6 text-white shadow-[0_0_15px_#7F44A6] hover:shadow-[0_0_35px_#7F44A6] hover:font-bold transition-shadow duration-300 flex flex-col justify-center h-full"
+              style="background-image: url('/background-6.png'); background-size: cover; background-position: center;">
+              <h2 class="text-5xl text-center mb-4">🏠</h2>
+              <p class="text-1xl ">Voir le détail</p>
+          </a>
+        </div>
+      </div>
+    </section>   
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="container mx-auto px-4 mt-16">
+        <p class="text-2xl text-white font-bold text-center">Pour plus d'informations, n'hésitez pas à nous contacter ou à venir nous voir en magasin !</p>
+        <div class="container mx-auto max-w-4xl mt-8">
+          <ContactInfo />
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+</Layout>

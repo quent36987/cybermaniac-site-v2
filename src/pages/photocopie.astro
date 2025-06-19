@@ -1,0 +1,39 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ContactInfo from '../components/ContactInfo.astro';
+---
+<Layout title="Cybermaniac - Photocopie et Impression">
+  <main>
+    <!-- Hero Section -->
+    <section class="text-white py-10">
+      <div class="container mx-auto px-4 text-center">
+        <img src="/logo-ecriture.png " alt="Logo Cybermaniac" class="w-full lg:w-auto lg:h-20 mx-auto mb-4" />
+        <p class="text-xl mb-8">Votre expert informatique à Saint-Étienne depuis plus de 18 ans</p>
+        <h2 class="text-5xl font-bold text-center mb-4 text-white py-4">Photocopie et Impression</h2>
+      </div>
+    </section>
+
+    <!-- Body Section -->
+    <section id="body">
+      <div class="container mx-auto px-4 max-w-4xl text-lg text-white space-y-6">
+        <p>Chez Cybermaniac, nous proposons un service de photocopie et d'impression, adapté à tous vos besoins !</p>
+        <p>Nous vous proposons :</p>
+        <ul class="list-disc pl-6 space-y-2">
+          <li>Photocopies et impressions en noir et blanc pour 50cts/feuille</li>
+          <li>Photocopies et impressions en couleur pour 1€/feuille</li>
+          <li>Scan de vos documents pour 20cts/document (envoie par mail ou transfert par clé usb)</li>
+        </ul>
+        <p>Amenez vos documents sur une clé USB ou envoyez le nous par mail à : <a href="mailto:ccopie42@gmail.com" class="text-Violet hover:text-Rose">ccopie42@gmail.com</a></p>
+        <p>Venez nous voir au magasin pour tous vos besoins d'impression et de photocopie !<br />⚠️Merci de faire l'appoint, nous ne rendons pas la monnaie.</p>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="container mx-auto px-4 max-w-4xl text-lg text-white space-y-6 py-8">
+        <ContactInfo />
+      </div>
+    </section>
+
+  </main>
+</Layout>

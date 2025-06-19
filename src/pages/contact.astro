@@ -5,17 +5,24 @@ import ContactInfo from '../components/ContactInfo.astro';
 const horaires = [
   { jour: 'LUNDI', matin: '9h00 - 12h00', aprem: '14h00 - 19h00' },
   { jour: 'MARDI', matin: '9h00 - 12h00', aprem: '14h00 - 19h00' },
-  { jour: 'MERCREDI', matin: '9h00 - 12h00', aprem: '14h00 - 19h00' },
+  { jour: 'MERCREDI', matin: '9h00 - 12h00', aprem: '14h00 - 18h00' },
   { jour: 'JEUDI', matin: '9h00 - 12h00', aprem: '14h00 - 19h00' },
   { jour: 'VENDREDI', matin: '9h00 - 12h00', aprem: '14h00 - 19h00' },
-  { jour: 'SAMEDI', matin: 'sur rdv', aprem: 'sur rdv' },
+  { jour: 'SAMEDI', matin: 'fermé', aprem: 'fermé' },
   { jour: 'DIMANCHE', matin: 'fermé', aprem: 'fermé' },
 ];
 ---
 
-<Layout title="Cybermaniac - Plan d'accès">
+<Layout title="Cybermaniac - Contact">
   <main class="container mx-auto px-4 py-8">
-    <h1 class="text-3xl font-bold text-center mb-12">Plan d'accès</h1>
+    <!-- Hero Section -->
+    <section class="text-white py-10">
+      <div class="container mx-auto px-4 text-center">
+        <img src="/logo-ecriture.png " alt="Logo Cybermaniac" class="w-full lg:w-auto lg:h-20 mx-auto mb-4" />
+        <p class="text-xl mb-8">Votre expert informatique à Saint-Étienne depuis plus de 18 ans</p>
+        <h2 class="text-5xl font-bold text-center mb-12 text-white py-4">Contact</h2>
+      </div>
+    </section>
 
     <div class="grid md:grid-cols-2 gap-8 mb-12">
       <!-- Carte -->
@@ -38,11 +45,11 @@ const horaires = [
         <ContactInfo />
 
         <!-- Horaires -->
-        <div class="bg-white p-6 rounded-lg shadow-lg">
-          <h2 class="text-2xl font-semibold mb-4">Horaires d'ouverture</h2>
+        <div class=" p-6 rounded-lg shadow-lg">
+          <h2 class="text-2xl font-semibold mb-4 text-white">Horaires d'ouverture</h2>
           <div class="overflow-x-auto">
             <table class="w-full">
-              <thead class="bg-blue-900 text-white">
+              <thead class="bg-Violet text-white">
                 <tr>
                   <th class="py-2 px-4 text-left">Jour</th>
                   <th class="py-2 px-4 text-left">Matin</th>
@@ -51,7 +58,7 @@ const horaires = [
               </thead>
               <tbody>
                 {horaires.map(({ jour, matin, aprem }) => (
-                  <tr class="border-b border-gray-200 hover:bg-gray-50">
+                  <tr class="border-b border-Violet text-white">
                     <td class="py-2 px-4 font-medium">{jour}</td>
                     <td class="py-2 px-4">{matin}</td>
                     <td class="py-2 px-4">{aprem}</td>

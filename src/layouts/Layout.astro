@@ -13,33 +13,40 @@ const { title } = Astro.props;
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Cybermaniac - Votre expert informatique à Saint-Étienne" />
+    <meta name="description" content="Cybermaniac, boutique stéphanoise depuis plus de 18 ans. Réparation informatique, montage de PC, photocopie, modélisation, impression et vente de filaments 3D… Un service sur mesure, en boutique ou à domicile !" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/fav.png" />
     <title>{title}</title>
   </head>
-  <body class="bg-gray-50">
-    <header class="bg-blue-900 text-white py-4 sticky top-0 z-40">
-      <nav class="container mx-auto px-4">
-        <div class="flex justify-between items-center">
-          <a href="/" class="flex items-center space-x-3">
-            <img src="/logo.jpg" alt="Cybermaniac Logo" class="h-10 w-21" />
-          </a>
+    <body class="relative bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#411D59] via-[#262a3b] to-[#161824]">
 
-          <!-- Menu Mobile -->
+    <header class="bg-GrisFonce2 text-white py-2 sticky top-0 z-40">
+      <nav class="container mx-auto px-4">
+
+        <!-- Menu Mobile -->
+        <div class="flex justify-between items-center block lg:hidden">
           <button id="menu-button" class="lg:hidden p-2" aria-label="Menu">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
             </svg>
           </button>
+          <a href="/" class="flex items-center space-x-3  mx-auto lg:mx-0">
+            <img src="/logo.png" alt="Cybermaniac Logo" class="h-20 w-30" />
+          </a>
+          <img src="/logoFRP2I.png" alt="Logo" class="h-10 w-21" />
+          </div>
 
-          <!-- Menu Desktop -->
+        <!-- Menu Desktop -->
+        <div class="flex justify-between items-center hidden lg:flex">
+          <a href="/" class="flex items-center space-x-3  mx-auto lg:mx-0">
+            <img src="/logo.png" alt="Cybermaniac Logo" class="h-14 w-25" />
+          </a>
           <div class="hidden lg:flex space-x-6">
-            <a href="/informatique" class="hover:text-blue-200">Informatique</a>
-            <a href="/deplacement" class="hover:text-blue-200">Déplacement</a>
-            <a href="/acces" class="hover:text-blue-200">Accès</a>
-            <a href="https://craftable.cybermaniac.fr/" class="hover:text-blue-200" target="_blank" rel="noopener noreferrer">Impression 3D</a>
-            <a href="https://boutique.cybermaniac.fr/" class="hover:text-blue-200" target="_blank" rel="noopener noreferrer">Boutique</a>
+            <a href="/" class="hover:text-Rose">Accueil</a>
+            <a href="/services" class="hover:text-Rose">Services</a>
+            <a href="https://craftable.cybermaniac.fr/" class="hover:text-Rose" target="_blank" rel="noopener noreferrer">Craftable3D</a>
+            <a href="https://boutique.cybermaniac.fr/" class="hover:text-Rose" target="_blank" rel="noopener noreferrer">Boutique en ligne</a>
+            <a href="/contact" class="hover:text-Rose">Contact</a>
           </div>
 
           <img src="/logoFRP2I.png" alt="Logo" class="h-10 w-21" />
@@ -52,27 +59,29 @@ const { title } = Astro.props;
 
     <slot />
 
-    <footer class="bg-blue-900 text-white py-8 mt-12">
-      <div class="container mx-auto px-4">
+    <footer class="bg-GrisFonce2 text-white py-8 mt-12">
+      <div class="container mx-auto px-4 ">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div class="text-center md:text-left">
-            <img src="/logo.jpg" alt="Cybermaniac Logo" class="h-12 w-25 mx-auto md:mx-0 mb-4" />
-            <p>&copy; 2024 Cybermaniac - Tous droits réservés</p>
-            <p>Référencer chez <a href="https://www.depannagedegeek.fr" target="_blank">https://www.depannagedegeek.fr</a></p>
-          </div>
-          <div class="text-center">
-            <h3 class="font-semibold mb-4">Liens Utiles</h3>
-            <ul class="space-y-2">
-              <li><a href="/mentions-legales" class="hover:text-blue-200">Mentions Légales</a></li>
-              <li><a href="/mentions-general" class="hover:text-blue-200">Conditions Générales de Vente</a></li>
-            </ul>
-          </div>
-          <div class="text-center md:text-right">
-            <h3 class="font-semibold mb-4">Contact</h3>
+            <h3 class="font-semibold mb-4">Cybermaniac</h3>
             <p>72 boulevard Alexandre de Fraissinette</p>
             <p>42100 Saint-Étienne</p>
-            <p>Tél : 04.87.66.67.33</p>
+            <p>04.87.66.67.33 - 06.84.25.25.27</p>
+            <p><a href="mailto:cybermaniac42@gmail.com" class="text-Violet hover:text-Rose">cybermaniac42@gmail.com</a></p>
           </div>
+
+          <div class="text-center">
+            <h3 class="font-semibold mb-4">Liens Utiles</h3>
+              <p><a href="/mentions-legales" class="hover:text-Rose">Mentions Légales</a></p>
+              <p><a href="/mentions-general" class="hover:text-Rose">Conditions Générales de Vente</a></p>
+          </div>
+
+          <div class="text-center md:text-right">
+            <img src="/logo.png" alt="Cybermaniac Logo" class="h-20 w-30 mx-auto md:mr-0 mb-4" />
+            <p>&copy; 2024 Cybermaniac - Tous droits réservés</p>
+            <p>Référencé chez <a href="https://www.depannagedegeek.fr" class="text-Violet hover:text-Rose " target="_blank" rel="noopener noreferrer">DepannageDeGeek</a></p>
+          </div>
+
         </div>
       </div>
     </footer>
